@@ -204,11 +204,11 @@
 
         function_layer {
             bindings = <
-&ma_7   &kp F1        &kp F2       &kp F3      &kp F4      &kp F5       &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12  &trans    &kp C_VOL_DN   &trans
-&trans  &ma_8         &trans       &ma_1       &trans      &ma_9        &trans  &ma_2   &ma_3   &ma_4   &ma_10   &trans   &trans   &trans    &trans         &trans
-&trans  &ma_5         &trans       &ma_11      &trans      &ma_12       &trans  &trans  &trans  &trans  &trans   &trans   &none    &kp HOME  &none          &none
-&trans  &out OUT_TOG  &bt BT_NXT   &bt BT_CLR  &bt BT_PRV  &bootloader  &trans  &trans  &trans  &trans  &trans   &none    &none    &trans    &kp PAGE_UP    &none
-&trans  &kp C_MENU    &kp C_POWER  &none       &none       &trans       &none   &none   &none   &trans  &trans   &none    &trans   &trans    &kp PAGE_DOWN  &trans
+&ma_7   &kp F1        &kp F2       &kp F3      &kp F4      &kp F5       &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12  &kp PRINTSCREEN  &kp C_VOL_DN   &trans
+&trans  &ma_8         &trans       &ma_1       &trans      &ma_9        &trans  &ma_2   &ma_3   &ma_4   &ma_10   &trans   &trans   &trans           &trans         &trans
+&trans  &ma_5         &trans       &ma_11      &trans      &ma_12       &trans  &trans  &trans  &trans  &trans   &trans   &none    &kp HOME         &none          &none
+&trans  &out OUT_TOG  &bt BT_NXT   &bt BT_CLR  &bt BT_PRV  &bootloader  &trans  &trans  &trans  &trans  &trans   &none    &none    &trans           &kp PAGE_UP    &none
+&trans  &kp C_MENU    &kp C_POWER  &none       &none       &trans       &none   &none   &none   &trans  &trans   &none    &trans   &trans           &kp PAGE_DOWN  &trans
             >;
         };
     };
