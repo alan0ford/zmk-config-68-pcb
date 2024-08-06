@@ -1,2 +1,0 @@
-config SHIELD_68-PCB
-    def_bool $(shields_list_contains,68-pcb)
