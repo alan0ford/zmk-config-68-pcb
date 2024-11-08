@@ -174,6 +174,24 @@
 
             label = "MA_12";
         };
+
+        ma_13: ma_13 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_WIN>,
+                <&macro_press>,
+                <&kp LEFT_SHIFT>,
+                <&macro_tap>,
+                <&kp S>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT>,
+                <&macro_release>,
+                <&kp LEFT_WIN>;
+
+            label = "MA_13";
+        };
     };
 };
 
@@ -194,7 +212,7 @@
 
         default_layer {
             bindings = <
-&kp ESC           &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0   &kp MINUS         &kp EQUAL          &kp BACKSPACE   &kp C_VOL_UP    &kp PAGE_UP
+&kp ESC           &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0   &kp MINUS         &kp EQUAL          &kp BACKSPACE   &ma_13          &kp PAGE_UP
 &lt 1 TAB         &kp Q         &kp W         &kp E         &kp R         &kp T         &kp Y         &kp U         &kp I         &kp O         &kp P          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH   &kp DEL         &kp PAGE_DOWN
 &kp CAPSLOCK      &kp A         &kp S         &kp D         &kp F         &kp G         &kp H         &kp J         &kp K         &kp L         &kp SEMICOLON  &ma_6             &none              &kp ENTER       &none           &none
 &kp LEFT_SHIFT    &kp Z         &kp X         &kp C         &kp V         &kp B         &kp N         &kp M         &kp COMMA     &kp PERIOD    &kp SLASH      &none             &none              &kp RSHIFT      &kp UP_ARROW    &none
@@ -204,11 +222,21 @@
 
         function_layer {
             bindings = <
-&ma_7   &kp F1        &kp F2       &kp F3      &kp F4      &kp F5       &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12  &kp PRINTSCREEN  &kp C_VOL_DN   &trans
-&trans  &ma_8         &trans       &ma_1       &trans      &ma_9        &trans  &ma_2   &ma_3   &ma_4   &ma_10   &trans   &trans   &trans           &trans         &trans
-&trans  &ma_5         &trans       &ma_11      &trans      &ma_12       &trans  &trans  &trans  &trans  &trans   &trans   &none    &kp HOME         &none          &none
-&trans  &out OUT_TOG  &bt BT_NXT   &bt BT_CLR  &bt BT_PRV  &bootloader  &trans  &trans  &trans  &trans  &trans   &none    &none    &trans           &kp PAGE_UP    &none
-&trans  &kp C_MENU    &kp C_POWER  &none       &none       &trans       &none   &none   &none   &trans  &trans   &none    &trans   &trans           &kp PAGE_DOWN  &trans
+&ma_7   &kp F1      &kp F2       &kp F3  &kp F4  &kp F5  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12  &kp PRINTSCREEN  &trans        &trans
+&trans  &ma_8       &trans       &ma_1   &trans  &ma_9   &trans  &ma_2   &ma_3   &ma_4   &ma_10   &trans   &trans   &trans           &trans        &trans
+&trans  &ma_5       &trans       &ma_11  &trans  &ma_12  &trans  &trans  &trans  &trans  &trans   &trans   &none    &kp HOME         &none         &none
+&trans  &trans      &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans   &none    &none    &trans           &kp C_VOL_UP  &none
+&trans  &kp C_MENU  &kp C_POWER  &none   &none   &trans  &none   &none   &none   &trans  &mo 2    &none    &trans   &trans           &kp C_VOL_DN  &trans
+            >;
+        };
+
+        layer_2 {
+            bindings = <
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2    &bt BT_SEL 3  &bt BT_SEL 4  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans        &trans        &trans          &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans        &trans        &trans          &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &out OUT_TOG  &bt BT_NXT    &bt BT_CLR_ALL  &bt BT_PRV    &bootloader   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans        &trans        &trans          &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
