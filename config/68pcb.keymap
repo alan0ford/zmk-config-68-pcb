@@ -192,6 +192,24 @@
 
             label = "MA_13";
         };
+
+        ma_14: ma_14 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp RIGHT_ALT>,
+                <&macro_press>,
+                <&kp RIGHT_SHIFT>,
+                <&macro_tap>,
+                <&kp SEMICOLON>,
+                <&macro_release>,
+                <&kp RIGHT_SHIFT>,
+                <&macro_release>,
+                <&kp RIGHT_ALT>;
+
+            label = "MA_14";
+        };
     };
 };
 
@@ -222,11 +240,11 @@
 
         function_layer {
             bindings = <
-&ma_7   &kp F1      &kp F2       &kp F3  &kp F4  &kp F5  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12  &kp PRINTSCREEN  &trans        &trans
-&trans  &ma_8       &trans       &ma_1   &trans  &ma_9   &trans  &ma_2   &ma_3   &ma_4   &ma_10   &trans   &trans   &trans           &trans        &trans
-&trans  &ma_5       &trans       &ma_11  &trans  &ma_12  &trans  &trans  &trans  &trans  &trans   &trans   &none    &kp HOME         &none         &none
-&trans  &trans      &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans   &none    &none    &trans           &kp C_VOL_UP  &none
-&trans  &kp C_MENU  &kp C_POWER  &none   &none   &trans  &none   &none   &none   &trans  &mo 2    &none    &trans   &trans           &kp C_VOL_DN  &trans
+&ma_7   &kp F1      &kp F2       &kp F3  &kp F4  &kp F5  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12  &kp PRINTSCREEN  &trans  &kp C_VOL_UP
+&trans  &ma_8       &trans       &ma_1   &trans  &ma_9   &trans  &ma_2   &ma_3   &ma_4   &ma_10   &trans   &trans   &trans           &trans  &kp C_VOL_DN
+&trans  &ma_5       &trans       &ma_11  &trans  &ma_12  &trans  &trans  &trans  &trans  &ma_14   &trans   &none    &kp HOME         &none   &none
+&trans  &trans      &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans   &none    &none    &trans           &trans  &none
+&trans  &kp C_MENU  &kp K_POWER  &none   &none   &trans  &none   &none   &none   &trans  &mo 2    &none    &trans   &trans           &trans  &trans
             >;
         };
 
