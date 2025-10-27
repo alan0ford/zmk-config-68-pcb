@@ -223,6 +223,11 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+		battery_printer: battery_printer {
+			compatible = "zmk,behavior-battery-printer";
+			label = "BATTERY_PRINTER";
+			#binding-cells = <0>;
+		};
     };
 
     keymap {
@@ -243,7 +248,7 @@
 &ma_7   &kp F1      &kp F2       &kp F3  &kp F4  &kp F5  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12  &kp PRINTSCREEN  &trans  &kp C_VOL_UP
 &trans  &ma_8       &trans       &ma_1   &trans  &ma_9   &trans  &ma_2   &ma_3   &ma_4   &ma_10   &trans   &trans   &trans           &trans  &kp C_VOL_DN
 &trans  &ma_5       &trans       &ma_11  &trans  &ma_12  &trans  &trans  &trans  &trans  &ma_14   &trans   &none    &kp HOME         &none   &none
-&trans  &trans      &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans   &none    &none    &trans           &trans  &none
+&trans  &trans      &trans       &trans  &trans  &battery_printer  &trans  &trans  &trans  &trans  &trans   &none    &none    &trans           &trans  &none
 &trans  &kp C_MENU  &kp K_POWER  &none   &none   &trans  &none   &none   &none   &trans  &mo 2    &none    &trans   &trans           &trans  &trans
             >;
         };
